@@ -10,7 +10,7 @@ MarkDown,
 Yaml,
 Jsonnet.
 3. Репозиторий склонирован.
-4. ![alt text] (https://github.com/lukoshkovve/NetologyDevOps/blob/main/lesson1/img/1.JPG)
+4. ![] (https://github.com/lukoshkovve/NetologyDevOps/blob/main/lesson1/img/1.JPG)
 
 
 
