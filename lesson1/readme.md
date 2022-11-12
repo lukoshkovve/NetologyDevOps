@@ -10,7 +10,8 @@ MarkDown,
 Yaml,
 Jsonnet.
 3. Репозиторий склонирован.
-4. ![] (C:\Users\Home\Desktop\DEVOPS\NetologyDevOps\lesson1\img\1)
+4. ![alt text] (lesson1/img/1.JPG)
+
 
 
 ## Задание 2 Описание жизненного цикла задачи (разработки нового функционала)
