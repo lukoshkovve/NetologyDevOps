@@ -9,8 +9,10 @@ MarkDown,
 Yaml,
 Jsonnet.
 3. Репозиторий склонирован.
+
 4.
 Jsonnet 
+
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/lesson1/img/1.JPG)
 
 Yaml
