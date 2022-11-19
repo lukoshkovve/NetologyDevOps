@@ -1,4 +1,4 @@
-# NetologyDevOps first commit
+# NetologyDevOps
 # Игнорировать все файлы с расширением .teraform во всех каталогах, а также ингорировать следующий каталог
 **/.terraform/*
 
