@@ -14,6 +14,7 @@
 
 1. Команда env 
 1. vagrant@vagrant:~$ cat /proc/2648/cmdline
+
 bashvagrant@vagrant:~$    - выведет команду которой был запущен процесс. В данном случае bash 
 vagrant@vagrant:~$ ls -l /proc/2648/exe
 lrwxrwxrwx 1 vagrant vagrant 0 Feb  2 18:34 /proc/2648/exe -> /usr/bin/bash – Это символьная ссылкуа на абсолютную директорию запущенного бинарного файла. В данном случае bash
