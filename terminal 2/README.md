@@ -14,7 +14,7 @@
 
 1. Команда env 
 1. cat /proc/2648/cmdline
-2. 
+
 bashvagrant@vagrant:   - выведет команду которой был запущен процесс. В данном случае bash 
 
 vagrant@vagrant:~$ ls -l /proc/2648/exe
