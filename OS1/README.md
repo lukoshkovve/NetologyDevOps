@@ -48,7 +48,7 @@ top       2908                        vagrant    1w      REG              253,0 
 root@vagrant:/home/vagrant# ps aux | grep defunct
 root        3389  0.0  0.0   6432   656 pts/2    S+   20:50   0:00 grep --color=auto defunct
 ```
-***5**.	
+**5**.	
 ```
 vagrant@vagrant:~$ sudo /usr/sbin/opensnoop-bpfccpermitted
 
