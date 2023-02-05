@@ -25,11 +25,11 @@ openat(AT_FDCWD, "/usr/share/misc/magic.mgc", O_RDONLY) = 3
 
 **3**.	Запустим 
 ```
-top > log2
+top > log5
 ```
 Убьём файл 
 ```
-sudo rm log2
+sudo rm log5
 ```
 ```
 vagrant@vagrant:/$ sudo lsof | grep log5
