@@ -37,7 +37,7 @@ vagrant@vagrant:/$ sudo lsof | grep log5
 top       2908                        vagrant    1w      REG              253,0  9209631    1316983 /home/vagrant/log5 (deleted)
 
 ```
-Видим, что PID = 2522 и дескриптор 1
+Видим, что PID = 2908 и дескриптор 1
 ```
 vagrant@vagrant:/$ echo -n ''> /proc/2908/fd/1
 vagrant@vagrant:/$ sudo lsof | grep log5
