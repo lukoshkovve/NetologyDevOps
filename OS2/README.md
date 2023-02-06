@@ -91,7 +91,7 @@ node_network_transmit_errs
 
 
 **3**.	
-![](foto/metrics.jpg)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/OS2/foto/metrics.JPG)
 
 
 **4**.	
