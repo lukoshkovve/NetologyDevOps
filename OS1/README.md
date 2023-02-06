@@ -1,4 +1,4 @@
-# Домашнее задание к занятию "3.2. Работа в терминале, лекция 2"
+# Домашнее задание к занятию "Операционные системы 1"
 **1**.
 ```
  	strace 2>log /bin/bash -c 'cd /tmp' &&  grep tmp log
@@ -25,11 +25,11 @@ openat(AT_FDCWD, "/usr/share/misc/magic.mgc", O_RDONLY) = 3
 
 **3**.	Запустим 
 ```
-top > log2
+top > log5
 ```
 Убьём файл 
 ```
-sudo rm log2
+sudo rm log5
 ```
 ```
 vagrant@vagrant:/$ sudo lsof | grep log5
@@ -37,7 +37,7 @@ vagrant@vagrant:/$ sudo lsof | grep log5
 top       2908                        vagrant    1w      REG              253,0  9209631    1316983 /home/vagrant/log5 (deleted)
 
 ```
-Видим, что PID = 2522 и дескриптор 1
+Видим, что PID = 2908 и дескриптор 1
 ```
 vagrant@vagrant:/$ echo -n ''> /proc/2908/fd/1
 vagrant@vagrant:/$ sudo lsof | grep log5
@@ -48,7 +48,7 @@ top       2908                        vagrant    1w      REG              253,0 
 root@vagrant:/home/vagrant# ps aux | grep defunct
 root        3389  0.0  0.0   6432   656 pts/2    S+   20:50   0:00 grep --color=auto defunct
 ```
-***5**.	
+**5**.	
 ```
 vagrant@vagrant:~$ sudo /usr/sbin/opensnoop-bpfccpermitted
 
