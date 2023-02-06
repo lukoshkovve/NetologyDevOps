@@ -91,7 +91,7 @@ node_network_transmit_errs
 
 
 **3**.	
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/OS2/foto/metrics.JPG)
+![](foto/metrics.jpg)
 
 
 **4**.	
@@ -115,37 +115,46 @@ vagrant@vagrant:~$ cat /proc/sys/fs/nr_open
 96000
 ```
 
-**6**.	Это операторы управления
-Точка с запятой (;)  - команда будет исполняться до момента достижения этого символа, далее будет исполнена другая команда, которая идет после ; 
-Двойной амперсанд (&&) выступает как логическая И и вторая команда будет исполнена только после того, как успешно исполнится первая команда.
-set -e будет работать в нашем примере, так как завершит работу при обработке test -d /tmp/some_dir
-
-**8**.	SET
-
-**-e** скрипт немедленно завершит работу, если любая команда выйдет с ошибкой.
-
-**-o** pipefail  Если нужно убедиться, что все команды в пайпах завершились успешно
-
-**-u** оболочка проверяет инициализацию переменных в скрипте. Если переменной не будет, скрипт немедленно завершиться.
-
-**-x** bash печатает в стандартный вывод все команды перед их исполнением.
-
-**9**. 
+**6**.	
+В первом терминале:
 ```
-vagrant@vagrant:~$ ps -o stat
-STAT
-Ss
-R+
+vagrant@vagrant:~$ sudo su
+root@vagrant:/home/vagrant# unshare -f --pid --mount-proc sleep 1h
+^Z
+[1]+  Stopped                 unshare -f --pid --mount-proc sleep 1h
+root@vagrant:/home/vagrant# bg
+[1]+ sudo unshare -f --pid --mount-proc sleep 1h &
 ```
-Т.к. система совсем пустая, точно нельзя сказать каких больше.
-Дополнительные буквы:
-<    high-priority (not nice to other users)
-               N    low-priority (nice to other users)
-               L    has pages locked into memory (for real-time and custom IO)
-               s    is a session leader
-               l    is multi-threaded (using CLONE_THREAD, like NPTL pthreads do)
-               +    is in the foreground process group
+Во втором терминале:
+```
+root@vagrant:/# ps aux | grep sleep
+root        2150  0.0  0.0   5476   584 pts/0    S    20:11   0:00 sleep 1h
+root        2414  0.1  0.0   6432   656 pts/1    T    20:22   0:00 grep --color=auto sleep
+```
+```
+root@vagrant:/# nsenter --target 2150 --pid --mount
+```
+```
+root@vagrant:/# ps -aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   5476   520 pts/0    S+   20:29   0:00 sleep 1h
+root           2  0.1  0.2   7236  4252 pts/1    S    20:31   0:00 -bash
+root          20  0.0  0.1   9080  3700 pts/1    R+   20:32   0:00 ps -aux
+```
 
-
-
-
+**7**.
+	**:(){ :|:& };:** - fork бомба. Функция bush которая вызывает себя рекурсивно, что перегружает ресурсы ПК в плоть до того, что он перастает отвечать.
+```
+   :(){ :|:& };:
+\_/| |||| ||\- ... the function ':', initiating a chain-reaction: each ':' will start    two more.
+ | | |||| |\- Definition ends now, to be able to run ...
+ | | |||| \- End of function-block
+ | | |||\- disown the functions (make them a background process), so that the children    of a parent
+ | | |||   will not be killed when the parent gets auto-killed
+ | | ||\- ... another copy of the ':'-function, which has to be loaded into memory.
+ | | ||   So, ':|:' simply loads two copies of the function, whenever ':' is called
+ | | |\- ... and pipe its output to ...
+ | | \- Load a copy of the function ':' into memory ...
+ | \- Begin of function-definition
+ \- Define the function ':' without any parameters '()' as follows:
+ ```
