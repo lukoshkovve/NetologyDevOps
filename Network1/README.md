@@ -33,6 +33,7 @@ X-DNS-Prefetch-Control: off
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Network1/foto/2.JPG)
 
 Дольше всего грузилась начальная страница - 371мс
+
 **3**.	
 ```
 vagrant@vagrant:~$ nslookup myip.opendns.com. resolver1.opendns.com
