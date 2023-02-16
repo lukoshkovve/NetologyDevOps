@@ -4,11 +4,13 @@
 
 
 **2**.	
+
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/SEC/foto/2.JPG)
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/SEC/foto/3.JPG)
 
 
 **3**.	
+
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/SEC/foto/4.JPG)
 
 Сделал как в презентации
