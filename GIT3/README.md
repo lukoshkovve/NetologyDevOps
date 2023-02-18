@@ -1,5 +1,6 @@
 # Домашнее задание к занятию "Инструменты Git"
-**1**.
+**1**. 
+Для того, чтобы поспотреть хеш которого начинается на aefea используем команду git show
 ```
 $ git show aefea
 commit aefead2207ef7e2aa5dc81a34aedf0cad4c32545
@@ -8,7 +9,8 @@ Date:   Thu Jun 18 10:29:58 2020 -0400
 ```
 
 
-**2**.	
+**2**.
+командой git show так же можно посмотреть есть ли тег у коммита
 ```
 $ git show 85024
 commit 85024d3100126de36331c6982bfaac02cdab9e76 (tag: v0.12.23)
@@ -17,6 +19,7 @@ Date:   Thu Mar 5 20:56:10 2020 +0000
 ```
 
 **3**.	
+команда работы с репозиториями, с которой можно посмотреть родителей git rev-list --parents -n 1 HEAD
 ```
 $ git rev-list --parents -n 1 b8d720
 b8d720f8340221f2146e4e4870bf2ee0bc48f2d5 
@@ -28,6 +31,9 @@ b8d720f8340221f2146e4e4870bf2ee0bc48f2d5
 ```
 
 **4**.	
+
+git log a..b
+означает предоставить мне все коммиты, которые были сделаны с моментаa, до и включаяb
 ```
 $ git log v0.12.23..v0.12.24 --oneline
 33ff1c03bb (tag: v0.12.24) v0.12.24
@@ -45,17 +51,20 @@ dd01a35078 Update CHANGELOG.md
 ```
 
 **5**.	
+grep - осуществил потиск по функции
 
 ```
 $ git grep 'func providerSource('
 provider_source.go:func providerSource(configs []*cliconfig.ProviderInstallation, services *disco.Disco) (getproviders.Source, tfdiags.Diagnostics) {
 ```
+ Операция pickaxe задается выражением -S"<строка>" - по содержанию
 ```
 $ git log -S'func providerSource(' --oneline
 8c928e8358 main: Consult local directories as potential mirrors of providers
 
 ```
 **6**.	
+grep - осуществил потиск по globalPluginDirs
 ```
 $ git grep 'globalPluginDirs'
 commands.go:            GlobalPluginDirs: globalPluginDirs(),
@@ -64,7 +73,8 @@ internal/command/cliconfig/config_unix.go:              // FIXME: homeDir gets c
 plugins.go:// globalPluginDirs returns directories that should be searched for
 plugins.go:func globalPluginDirs() []string { 
 ```
-Нас интересует функция *plugins.go:func globalPluginDirs() []string {*
+Нашли функцию *plugins.go:func globalPluginDirs() []string {*
+нужно команде git log передать опцию -L, в результате будет показана история изменения функции или строки кода в вашей кодовой базе (по презентации)
 ```
  $ git log -L ':func globalPluginDirs':plugins.go --oneline
 78b1220558 Remove config.go and update things using its aliases
@@ -186,7 +196,7 @@ diff --git a/plugins.go b/plugins.go
 +}
 
 ```
-Перечислены по мере возникновения:
+Перечислены по мере возникновения (выписал из результата):
 ```
 8364383c35 Push plugin discovery down into command package
 66ebff90cd move some more plugin search path logic to command
@@ -196,6 +206,8 @@ diff --git a/plugins.go b/plugins.go
 
 ```
 **7**.
+Команда git log обладает некоторыми мощными инструментами для поиска определённых коммитов по содержимому их сообщений или содержимому сделанных в них изменений
+(так же из презентации)
 ```
 $ git log -S'func synchronizedWriters'
 commit bdfea50cc85161dea41be0fe3381fd98731ff786
