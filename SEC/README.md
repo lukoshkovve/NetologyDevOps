@@ -1,14 +1,16 @@
-# Домашнее задание к занятию "Операционные системы лекция 2"
+# Домашнее задание к занятию "Элементы безопасности информационных систем"
 **1**.
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/SEC/foto/1.JPG)
 
 
 **2**.	
+
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/SEC/foto/2.JPG)
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/SEC/foto/3.JPG)
 
 
 **3**.	
+
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/SEC/foto/4.JPG)
 
 Сделал как в презентации
