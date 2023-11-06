@@ -40,6 +40,8 @@ variable "vm_web_neme" {
 
 **3**.	
 
+создал ресурсы для второй машины
+
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/4.JPG)
 
 
