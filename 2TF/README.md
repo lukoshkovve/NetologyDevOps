@@ -45,7 +45,21 @@ variable "vm_web_neme" {
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/4.JPG)
 
 
-**4**.	
+**4**.
+
+объявил output
+
+```
+output "netology-develop-platform-web" {
+  description = "ip public web"
+  value       = yandex_compute_instance.platform.network_interface.0.nat_ip_address
+}
+
+output "netology-develop-platform-db" {
+  description = "ip public db"
+  value       = yandex_compute_instance.platform1.network_interface.0.nat_ip_address
+}
+```
 
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/5.JPG)
 
