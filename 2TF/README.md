@@ -47,6 +47,7 @@ cores         = 2
 **6**.	
 
 Создал одну переменную 
+
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/12.JPG)
 
 так же для metadata
