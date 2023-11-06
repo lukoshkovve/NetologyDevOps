@@ -19,17 +19,29 @@
 
 **5**.	
 
+<<<<<<< HEAD
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF1/foto/TF.JPG)
+=======
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/1TF/foto/TF.JPG)
+>>>>>>> cde2edb529ca913944ad9b22c5b7fc208efcc665
 
 **6**.	
 
 если terraform apply запустить с флагом -auto-approve то создастся план на основе изменений при этом не спрашивая разрешения у пользователя. Что может повлечь уничтожение данных. 
 
+<<<<<<< HEAD
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF1/foto/TF2.JPG)
 
 **7**.
 
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF1/foto/TF2.JPG)
+=======
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/1TF/foto/TF2.JPG)
+
+**7**.
+
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/1TF/foto/TF3.JPG)
+>>>>>>> cde2edb529ca913944ad9b22c5b7fc208efcc665
 
 **8**.
 
