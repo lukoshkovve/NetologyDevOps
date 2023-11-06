@@ -32,7 +32,7 @@ cores         = 2
 
 **4**.	
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/4.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/5.JPG)
 
 **5**.	
 
