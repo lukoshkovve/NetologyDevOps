@@ -1,8 +1,8 @@
 # Домашнее задание к занятию "Основы Terraform. Yandex Cloud"
 **1**.
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/2.JPG)
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/1.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/2.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/1.JPG)
 
 > Не хватало ресурса - resource "yandex_resourcemanager_cloud_iam_member"
 
@@ -21,43 +21,43 @@ cores         = 2
 
 После добавления переменных `terraform plan` - без именений.
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/3.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/3.JPG)
 
 
 
 **3**.	
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/4.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/4.JPG)
 
 
 **4**.	
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/4.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/4.JPG)
 
 **5**.	
 
 Использовал интерполяцию
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/10.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/10.JPG)
 
 В файле main.tf использовал данные переменные
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/11.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/11.JPG)
 
 **6**.	
 
 Создал одну переменную 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/12.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/12.JPG)
 
 так же для metadata
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/13.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/13.JPG)
 
 Далее использовал их в main
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/14.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/14.JPG)
 
 удалил все ненужные переменные.
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/9.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/9.JPG)
 
