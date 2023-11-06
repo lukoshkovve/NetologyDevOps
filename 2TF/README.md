@@ -18,7 +18,20 @@ cores         = 2
 
 
 **2**.	
+переменные создал, в main, так же на них сослался
+```
+variable "vm_web_family" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "yandex_compute_image"
+}
 
+variable "vm_web_neme" {
+  type        = string
+  default     = "netology-develop-platform-web"
+  description = "yandex_compute_instance"
+}
+```
 После добавления переменных `terraform plan` - без именений.
 
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/2TF/foto/3.JPG)
