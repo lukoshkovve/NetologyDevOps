@@ -153,6 +153,7 @@ network_interface {
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/6.JPG)
 
 Итог
+
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/7.JPG)
 
 
@@ -191,10 +192,13 @@ ${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"]}
 %{ endfor }
 ```
  Выполняем код
+ 
  ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/8.JPG)
 
  Файл inventory.yml
+ 
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/9.JPG)
 
 Проверяем на одной из виртуалок, что nginx установлен
+
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/10.JPG)
