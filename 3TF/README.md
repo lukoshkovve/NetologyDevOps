@@ -6,7 +6,7 @@
 
 >Код выполнен.
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF3/foto/1.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/1.JPG)
 
 **2**.	
 
@@ -38,11 +38,11 @@ resource "yandex_compute_instance" "web" {
 ```
 Созданы виртуальные машины:
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/2.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/2.JPG)
 
 Установлена группа безопасности:
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF2/foto/3.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/3.JPG)
 
 2.Создал файл for_each-vm.tf
 ```
@@ -102,9 +102,9 @@ locals {
 ```
 5. После выполнения кода, все ВМ создались корректно и в правильной последовательности
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF3/foto/4.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/4.JPG)
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF3/foto/5.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/5.JPG)
 
 **3**.	
 Создадим файл disk_vm.tf с содержимым
@@ -150,10 +150,10 @@ network_interface {
 ```
 Результат исполнения
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF3/foto/6.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/6.JPG)
 
 Итог
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF3/foto/7.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/7.JPG)
 
 
 **4**.	
@@ -191,10 +191,10 @@ ${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"]}
 %{ endfor }
 ```
  Выполняем код
- ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF3/foto/8.JPG)
+ ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/8.JPG)
 
  Файл inventory.yml
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF3/foto/8.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/9.JPG)
 
 Проверяем на одной из виртуалок, что nginx установлен
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/TF3/foto/10.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/3TF/foto/10.JPG)
