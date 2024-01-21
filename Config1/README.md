@@ -7,27 +7,31 @@
 
 
 **2**.	
-> заменил значение на *all default fact*
+> Заменил значение на *all default fact*
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Config1/foto/2.JPG)
 
 
-**3**.
-	
-Вывел список ресурсов
+**3 - 4**.
+> Подготовил окружение, зафиксировал значения
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Config1/foto/3.JPG)
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/4TF/foto/6.JPG)
+**5 - 6**.
+> Изменил значения, на выходе они корректрые
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Config1/foto/5.JPG)
 
-Удалил модуль vpc
+**7**.
+> Факты зашифровал
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Config1/foto/7.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Config1/foto/8.JPG)
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/4TF/foto/7.JPG)
+**8**.
+> После ввода пароля, код отработал нормально
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Config1/foto/9.JPG)
 
+**9**.
+> Подойдет *local*
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Config1/foto/11.JPG)
 
-Удалил модуль vm
-
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/4TF/foto/8.JPG)
-
-Восстановил все обратно
-
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/4TF/foto/9.JPG)
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/4TF/foto/10.JPG)
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/4TF/foto/11.JPG)
+**10 - 11**.
+> Группа добавлена, факты определены корректно
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Config1/foto/10.JPG)
