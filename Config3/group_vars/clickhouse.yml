@@ -1,0 +1,6 @@
+---
+clickhouse_users_custom:
+  logger:
+    name: nolar
+    password: nolar
+      - 62.84.114.61
