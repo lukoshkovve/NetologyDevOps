@@ -1,0 +1,5 @@
+---
+ - name: lighthouse
+   src: git@github.com:lukoshkovve/NetologyDevOps.git
+   scm: git
+   version: role_ansible_lighthouse

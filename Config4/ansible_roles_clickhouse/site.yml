@@ -1,0 +1,5 @@
+---
+- name: Install Clickhouse
+  hosts: clickhouse01
+  roles:
+   - clickhouse

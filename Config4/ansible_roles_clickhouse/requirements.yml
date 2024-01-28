@@ -1,0 +1,5 @@
+---
+ - name: ñlickhouse
+   src: git@github.com:lukoshkovve/NetologyDevOps.git
+   scm: git
+   version: roles_ansible_clickhouse

@@ -1,0 +1,5 @@
+---
+vector:
+  hosts:
+    vector:
+      ansible_host: 178.154.203.231

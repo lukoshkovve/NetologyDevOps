@@ -1,0 +1,5 @@
+---
+lighthouse:
+  hosts:
+    lighthouse:
+      ansible_host: 84.201.128.70
