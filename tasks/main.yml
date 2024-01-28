@@ -5,9 +5,8 @@
     dest: "./vector-{{ vector_version }}-1.amd64.deb"
 - name: Vector | Install packages
   become: true
-    apt:
-      deb: 
-         ./vector-{{ vector_version }}-1.amd64.deb
+  apt:
+    deb: ./vector-{{ vector_version }}-1.amd64.deb
 - name: Vector | template config
   become: true
   ansible.builtin.template:
@@ -21,4 +20,4 @@
     src: vector.service.j2
     dest: /lib/systemd/system/vector.service
     mode: "0644"
-   notify: Start Vector service
+  notify: Start Vector service
