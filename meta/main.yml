@@ -28,9 +28,10 @@ galaxy_info:
   # https://galaxy.ansible.com/api/v1/platforms/
   #
   platforms:
-    - name: Ubuntu
+    - name: ubuntu
       versions:
-        - 20.04
+      - 20.04
+      - 22.04
   # - name: SomePlatform
   #   versions:
   #   - all

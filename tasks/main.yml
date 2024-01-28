@@ -3,19 +3,20 @@
     - name: Get clickhouse distrib
       ansible.builtin.get_url:
        url: "https://packages.clickhouse.com/deb/pool/main/c/{{ item }}/{{ item }}_{{ clickhouse_version }}_amd64.deb"
-        dest: "./{{ item }}_{{ clickhouse_version }}.amd64.deb"
+       dest: "./{{ item }}_{{ clickhouse_version }}.amd64.deb"
       with_items: "{{ clickhouse_packages }}"
   rescue:
-        - name: Get clickhouse distrib
-          ansible.builtin.get_url:
-            url: "https://packages.clickhouse.com/deb/pool/main/c/clickhouse-common-static/clickhouse-common-static_{{ clickhouse_version }}_amd64.deb"
-            dest: "./clickhouse-common-static_{{ clickhouse_version }}.amd64.deb"
+    - name: Get clickhouse distrib
+      ansible.builtin.get_url:
+       url: "https://packages.clickhouse.com/deb/pool/main/c/clickhouse-common-static/clickhouse-common-static_{{ clickhouse_version }}_amd64.deb"
+       dest: "./clickhouse-common-static_{{ clickhouse_version }}.amd64.deb"
 - name: Install clickhouse packages
-    apt:
-        clickhouse-common-static_{{ clickhouse_version }}.amd64.deb
-            clickhouse-client_{{ clickhouse_version }}.amd64.deb
-            clickhouse-server_{{ clickhouse_version }}.amd64.deb
-      notify: Start clickhouse service
+  become: true
+  apt:
+    deb: ./clickhouse-common-static_{{ clickhouse_version }}.amd64.deb
+    deb: ./clickhouse-client_{{ clickhouse_version }}.amd64.deb
+    deb: ./clickhouse-server_{{ clickhouse_version }}.amd64.deb
+  notify: Start clickhouse service
 - name: Flush handlers
   meta: flush_handlers
 - name: Create database
