@@ -1,0 +1,15 @@
+---
+- name: lighthouse | Copy from git
+  become: true
+  git:
+     repo: https://github.com/VKCOM/lighthouse.git
+     version: master
+     dest: "{{ lighthouse_data }}"
+
+- name: lighthouse | set config site
+  become: true
+  template:
+    src: templates/default.conf.j2
+    dest: /etc/nginx/conf.d/nginx.conf
+    mode: "0644"
+  notify: reload-nginx

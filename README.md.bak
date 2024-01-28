@@ -1,7 +1,8 @@
-lighthouse
+Clickhouse
 =========
 
-Install lighthouse
+Install Vector
+
 
 
 Role Variables
@@ -9,7 +10,7 @@ Role Variables
 
 | vars | descriptions |
 |----|--------------------|
-| lighthouse_packages | packages |
+| Vector_version | Version |
 
 
 Example Playbook
@@ -19,7 +20,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: lighthouse }
+         - { role: Vector }
 
 License
 -------

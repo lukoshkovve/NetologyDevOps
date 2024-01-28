@@ -1,7 +1,11 @@
 ---
-- name: Start Vector service
+- name: start-nginx
   become: true
-  ansible.builtin.service:
-    name: vector
-    state: started
-
+  service: 
+   name: nginx
+   state: started  
+- name: reload-nginx
+  become: true
+  service: 
+   name: nginx
+   state: restarted
