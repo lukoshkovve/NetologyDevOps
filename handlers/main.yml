@@ -1,7 +1,7 @@
 ---
-- name: Start clickhouse service
-   become: true
-   become_method: sudo
-   ansible.builtin.service:
-     name: clickhouse-server
-     state: restarted
+- name: Start Vector service
+  become: true
+  ansible.builtin.service:
+    name: vector
+    state: started
+

@@ -1,5 +1,22 @@
 ---
-clickhouse_packages:
-  - clickhouse-client
-  - clickhouse-server
-  - clickhouse-common-static
+vector_url: "https://packages.timber.io/vector/{{ vector_version }}/vector_{{ vector_version }}-1_amd64.deb"
+vector_config_dir: "/etc/vector"
+vector_config:
+  sources:
+    logs_file:
+      type: file
+      include:
+       - /home/vector/logs/*.logs
+  sinks:
+    to_clickhouse:
+      type: clickhouse
+      inputs:
+        - logs_file
+      database: sample
+      endpoint: http://62.84.114.61:8123
+      table: some_log
+      auth:
+        password: nolar
+        user: nolar
+      compression: gzip
+      skip_unknown_fields: true
