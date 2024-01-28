@@ -1,4 +1,4 @@
-Clickhouse
+Vector
 =========
 
 Install Vector
