@@ -14,12 +14,12 @@
 
 **6**.
 > Запланировал двухнедельный спринт с задачами bug и epic
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/CI1/foto/3.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/CI1/foto/4.JPG)
 
 **7**.
 > Задачи - провел. Спринт зактыт.
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/CI1/foto/3.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/CI1/foto/5.JPG)
 
 **8**.
 > Схемы workflow XML в корне проекта.
