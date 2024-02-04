@@ -169,7 +169,7 @@ Job succeeded
 
 
 > В результате у нас в репо создался образ с необходимым названием
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/CI6/foto/6.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/CI6/foto/7.JPG)
 
 
 > решённый Issue
