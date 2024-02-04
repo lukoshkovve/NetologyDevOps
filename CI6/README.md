@@ -6,7 +6,7 @@
 
 > Dockerfile
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/CI3/foto/4.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/CI6/foto/4.JPG)
 
 
 > Лог pipeline
