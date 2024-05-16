@@ -70,4 +70,4 @@ spec:
 
 Как результат, мы можем посмотреть ответ curl
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/K8S2/foto/6.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/K8S2/foto/7.JPG)
