@@ -66,7 +66,7 @@ spec:
 Запускаю и прокидываю порты 
 
 ![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/K8S2/foto/5.JPG)
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/K8S2/foto/6.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/K8S2/foto/9.JPG)
 
 Как результат, мы можем посмотреть ответ curl
 
