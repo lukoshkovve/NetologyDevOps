@@ -334,7 +334,7 @@ build:
 
 
 
-<details><summary>Dockerfile</summary>
+Dockerfile
 ```
 FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
@@ -346,7 +346,6 @@ COPY ./frontend/nginx.conf /etc/nginx/conf.d/nginx.conf
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 ```
 
-</details>
 
 в index.html у нас содержится статичная страница с текстом "Делаю проект нетологии"
 
