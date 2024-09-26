@@ -40,7 +40,7 @@ resource "yandex_storage_bucket" "diplom-lukoshkov" {
 ```
 Применим конфигурацию
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/1.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/1.JPG)
 
 
 Далее опишем remote backend в проекте Terraform
@@ -66,11 +66,11 @@ terraform {
 
 после применения кода: 
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/3.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/3.JPG)
 
 В нутри нашего бакета он так же появился:
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/4.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/4.JPG)
 
 
 3. Создаем VPC с подсетями в разных зонах доступности:
@@ -104,15 +104,15 @@ resource "yandex_vpc_subnet" "subnet2" {
 
 После выполнения кода создались сеть и две подсети с разными зонами доступности
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/6.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/6.JPG)
 
 так же проверим в веб интерфейсе
  
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/5.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/5.JPG)
 
 после первичной настойки, у нас файл состояния находится в бакете и имеет актуальное состояние так же проверка кода на валидацию проходит успешно:
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/7.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/7.JPG)
 
 
 **Создание Kubernetes кластера**
@@ -194,26 +194,26 @@ count = 2
 
 применяем код:
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/8.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/8.JPG)
 
 смотрим в веб интерфейс:
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/9.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/9.JPG)
 
 Все необходимые ВМ созданы с требуемыми ресурсами и в нужном количестве.
 
 без дополнительных ручных действий можно выполнить terraform destroy и terraform apply
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/12.JPG)
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/13.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/12.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/13.JPG)
 
 б) Для подготовки конфигурации ansible воспользуемся Kubespray, для этого склонируем требуемую ветку себе
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/10.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/10.JPG)
  
  и установим все необходимые зависимости
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/11.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/11.JPG)
 
 Далее нам необходимо создать inventory который представляет из себя список хостов и ролей. Т.к. мы хотим, чтобы у нас код был максимально автоматизированным мы можем файл inventory.yaml заполнить автоматически применив шаблон.
 
@@ -286,21 +286,21 @@ resource "local_file" "inventory_cfg" {
 ansible-playbook -u ubuntu --private-key ~/.ssh/id_rsa -i inventory/mycluster/inventory.yaml cluster.yml -b
 
 ```
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/14.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/14.JPG)
 
 Настраиваем конфиг на мастере и получаем готовый к дальнейшей работе кластер kubernetes
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/15.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/15.JPG)
 
 **Создание тестового приложения**
 
 Для нашего проекта будем использовать GitLab и для этго воспользуемся Managed Service for GitLab (это решение быстрое и удобное в использовании)
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/16.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/16.JPG)
 
 установим и зарегестрируем RUNNER на master
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/17.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/17.JPG)
 
 runner зарегистрирован и ожидает задания.
 
@@ -424,7 +424,7 @@ Job succeeded
 
 И смотрим, что у нас в локальном registry появился образ nginx с нашим тестовым приложением
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/18.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/18.JPG)
 
 
 **Подготовка системы мониторинга и деплой приложения**
@@ -432,16 +432,16 @@ Job succeeded
 
 1. Мы будем использовать Helm для установки стека 
 проверим версию Helm
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/19.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/19.JPG)
 данная версия была установлена на этапе формирования инфраструктуры из файла cloud-init
 
 добавим репозиторий и найдем нужный чарт
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/20.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/20.JPG)
 
 Установим стек
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/21.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/21.JPG)
 
 Далее нам необходимо сделать, чтобы службы Prometheus и Grafana были доступны извне для этого в манифесте установим тип NodePort.
 
@@ -462,15 +462,15 @@ Job succeeded
 ```
 
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/22.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/22.JPG)
 после наших правок видим:
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/25.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/25.JPG)
 
 стали доступны web интерфейсы Prometheus и Grafana
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/23.JPG)
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/24.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/23.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/24.JPG)
 
 2. Пишем Deployment приложения
 ```
@@ -514,9 +514,9 @@ spec:
     nodePort: 30004
 ```
 После применения конфигурации 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/27.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/27.JPG)
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/26.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/26.JPG)
 
 Наш простой сайт доступен извне и отображается, то что мы туда положили
 
@@ -526,7 +526,7 @@ spec:
 2. Реализуем по следующим образом: при выполнении задания мы возьмем последний тег и подставим его в наш deployment и через SSH реализуем передачу и далее исполнение этого deployment.
 
 добавим все необходимые переменные в GitLab
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/28.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/28.JPG)
 
 и отредактируем наш 
 
@@ -611,24 +611,24 @@ deploy:
 
 смотрим на веб интерфейс (там есть версия нашего сайта)
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/29.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/29.JPG)
 
 теперь только меняем версию в файле index.html на версию 1.1 и нажимаем commit
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/30.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/30.JPG)
 
 задание создано автоматически по коммиту
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/31.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/31.JPG)
 
 Stage deploy выполнен удачно так же мы видим в логах, что наш сайт имеет статус configured
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/32.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/32.JPG)
 
 
 смотрим на веб 
 
-![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Yandex/foto/33.JPG)
+![](https://github.com/lukoshkovve/NetologyDevOps/blob/main/Diplomfull/foto/33.JPG)
 
 версия поменялась, значит все прошло как и было необходимо из условий.
 
