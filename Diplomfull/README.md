@@ -335,9 +335,8 @@ build:
 
 
 <details><summary>Dockerfile</summary>
-
+```
 FROM nginx:alpine
-# Заменяем дефолтную страницу nginx соответствующей веб-приложению
 RUN rm -rf /usr/share/nginx/html/*
 RUN rm -rf /etc/nginx/conf.d/nginx.conf
 COPY ./frontend/index.html /usr/share/nginx/html
@@ -345,7 +344,7 @@ COPY ./frontend/index.html /usr/share/nginx/html
 COPY ./frontend/nginx.conf /etc/nginx/conf.d/nginx.conf
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
-
+```
 
 </details>
 
