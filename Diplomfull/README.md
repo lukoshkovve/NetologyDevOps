@@ -530,8 +530,7 @@ spec:
 
 <details><summary>.gitlab-ci.yml</summary>
 
-
-
+```
 stages:
   - build
   - deploy
@@ -602,6 +601,8 @@ deploy:
       EOF"
       #scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r deployment.yaml "$SSH_USER@$SSH_HOST":/home/ubuntu/deployment.yaml
       ssh -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "kubectl apply -f deployment.yaml -n netology"
+      
+```
 
 </details>
 
